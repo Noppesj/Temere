@@ -1,0 +1,10 @@
+﻿  transformobject.cpp
+  GLM: rotate function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  sceneobject.cpp
+  scenehandler.cpp
+  rect.cpp
+  quadtree.cpp
+  hitbox.cpp
+  Generating Code...
+     Creating library C:\Development\Temere\Temere\Debug\Scene.lib and object C:\Development\Temere\Temere\Debug\Scene.exp
+  Scene.vcxproj -> C:\Development\Temere\Temere\Debug\Scene.dll

@@ -1,0 +1,8 @@
+﻿  utility.cpp
+  timer_win.cpp
+  timer_unixcpp.cpp
+  object.cpp
+  helper.cpp
+  Generating Code...
+     Creating library C:\Development\Temere\Temere\Debug\Utility.lib and object C:\Development\Temere\Temere\Debug\Utility.exp
+  Utility.vcxproj -> C:\Development\Temere\Temere\Debug\Utility.dll
