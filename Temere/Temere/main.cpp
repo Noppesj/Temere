@@ -11,7 +11,7 @@ using namespace Temere::Utility;
 using namespace Temere::Logic;
 
 int DISPLAY_WIDTH = 1600;
-int DISPLAY_HEIGHT = 1000;
+int DISPLAY_HEIGHT = 10001;
 
 const std::string TITLE = "Temere V1.0";
 /* Our program's entry point */

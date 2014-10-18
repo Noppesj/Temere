@@ -27,13 +27,9 @@ const ModelObject& ModelObject::operator=(const ModelObject& ref)
 	return *this;
 }
 
-void ModelObject::test()
-{
-
-}
-
 bool ModelObject::loadObj(const std::string& path)
 {
+	(void)path;
 	/*std::vector<glm::vec3> vTempVertices;
 	std::vector<glm::vec2> vTempUv;
 	std::vector<glm::vec3> vTempNorm;

@@ -17,9 +17,8 @@ namespace Temere
 				TEMERE_DYNAMIC_LIBRARY_PREFIX const ModelObject& operator=(const ModelObject& ref);
 				
 				TEMERE_DYNAMIC_LIBRARY_PREFIX bool loadObj(const std::string& path);
-				TEMERE_DYNAMIC_LIBRARY_PREFIX void test();
 			private:
-			
+				int test;
 		};
 	}
 }

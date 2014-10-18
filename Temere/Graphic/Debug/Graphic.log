@@ -4,11 +4,16 @@
   spriteanimation.cpp
   shader.cpp
   modelobject.cpp
-c:\development\temere\temere\graphic\modelobject.cpp(35): error C2220: warning treated as error - no 'object' file generated
-c:\development\temere\temere\graphic\modelobject.cpp(35): warning C4100: 'path' : unreferenced formal parameter
   graphicmanager.cpp
   display.cpp
   camera.cpp
   GLM: perspective function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
   bufferresource.cpp
   Generating Code...
+cl : Command line warning D9030: '/Gm' is incompatible with multiprocessing; ignoring /MP switch
+  spriteobject.cpp
+  graphicobject.cpp
+  Generating Code...
+  stb_image.c
+     Creating library C:\Development\GithubRep\VS2013\Temere\Temere\Debug\Graphic.lib and object C:\Development\GithubRep\VS2013\Temere\Temere\Debug\Graphic.exp
+  Graphic.vcxproj -> C:\Development\GithubRep\VS2013\Temere\Temere\Debug\Graphic.dll

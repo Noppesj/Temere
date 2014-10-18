@@ -5,4 +5,5 @@
   animationlogic.cpp
   actor.cpp
   Generating Code...
-LINK : fatal error LNK1104: cannot open file 'C:\Development\Temere\Temere\Debug\Graphic.lib'
+     Creating library C:\Development\GithubRep\VS2013\Temere\Temere\Debug\Logic.lib and object C:\Development\GithubRep\VS2013\Temere\Temere\Debug\Logic.exp
+  Logic.vcxproj -> C:\Development\GithubRep\VS2013\Temere\Temere\Debug\Logic.dll
