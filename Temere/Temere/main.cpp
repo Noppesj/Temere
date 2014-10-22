@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 		std::cout << "Fail to load obj \n";
 		return 0;
 	}
-	modelObject.setScale(glm::vec3(1.0f, 1.0f, 1.0f));
+	modelObject.setScale(glm::vec3(0.5f, 0.5f, 0.5f));
 	modelObject.setPosition(glm::vec3(0.0f, 0.5f, 1.0f));
 	
 	SDL_Event e;

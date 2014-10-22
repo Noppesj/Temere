@@ -135,6 +135,15 @@
       <Project>{6e15ae2d-8f96-402b-9e91-e34c769bf859}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Resources\Shaders\animationVertex.glsl" />
+    <None Include="..\..\Resources\Shaders\testFragmentShader.glsl" />
+    <None Include="..\..\Resources\Shaders\testVertexShader.glsl" />
+    <None Include="..\..\Resources\Shaders\textureFragment.glsl" />
+    <None Include="..\..\Resources\Shaders\textureFragment2.glsl" />
+    <None Include="..\..\Resources\Shaders\textureVertex.glsl" />
+    <None Include="..\..\Resources\Shaders\textureVertex2.glsl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
