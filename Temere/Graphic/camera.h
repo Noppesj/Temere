@@ -29,6 +29,11 @@ namespace Temere
 			glm::vec3 mPosition;
 			glm::vec3 mForward;
 			glm::vec3 mUp;
+
+			float mFov;
+			float mAspect;
+			float mNear;
+			float mFar;
 		};
 	}
 }

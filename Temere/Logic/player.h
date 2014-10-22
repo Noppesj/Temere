@@ -29,8 +29,8 @@ namespace Temere
 				TEMERE_DYNAMIC_LIBRARY_PREFIX void update(const float deltaTime);
 				TEMERE_DYNAMIC_LIBRARY_PREFIX void draw(const glm::mat4& projection,const  glm::mat4& view);
 
-				TEMERE_DYNAMIC_LIBRARY_PREFIX void loadShaders(std::string vertexShader_path, std::string fragmentShader_path);
-				TEMERE_DYNAMIC_LIBRARY_PREFIX bool loadTexture(std::string texturePath);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX void loadShaders(const std::string& vertexShader_path,const std::string& fragmentShader_path);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX bool loadTexture(const std::string& texturePath);
 
 				TEMERE_DYNAMIC_LIBRARY_PREFIX void moveLeft(const float deltaTime);
 				TEMERE_DYNAMIC_LIBRARY_PREFIX void moveRight(const float deltaTime);

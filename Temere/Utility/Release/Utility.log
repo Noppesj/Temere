@@ -1,22 +1,9 @@
-﻿Build started 2014-06-30 09:11:54.
-     1>Project "C:\Development\Temere\Temere\Utility\Utility.vcxproj" on node 2 (Rebuild target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\\..\\References\Include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt object.cpp timer_unixcpp.cpp timer_win.cpp utility.cpp
-         object.cpp
-         timer_unixcpp.cpp
-         timer_win.cpp
-         utility.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Development\Temere\Temere\Release\Utility.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Development\Temere\Temere\Release\Utility.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Development\Temere\Temere\Release\Utility.lib" /MACHINE:X86 /SAFESEH /DLL Release\object.obj
-         Release\timer_unixcpp.obj
-         Release\timer_win.obj
-         Release\utility.obj
-            Creating library C:\Development\Temere\Temere\Release\Utility.lib and object C:\Development\Temere\Temere\Release\Utility.exp
-         Generating code
-         Finished generating code
-         Utility.vcxproj -> C:\Development\Temere\Temere\Release\Utility.dll
-     1>Done Building Project "C:\Development\Temere\Temere\Utility\Utility.vcxproj" (Rebuild target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:01.00
+﻿  helper.cpp
+  object.cpp
+  timer_unixcpp.cpp
+  timer_win.cpp
+  utility.cpp
+     Creating library C:\Development\GithubRep\VS2013\Temere\Temere\Release\Utility.lib and object C:\Development\GithubRep\VS2013\Temere\Temere\Release\Utility.exp
+  Generating code
+  Finished generating code
+  Utility.vcxproj -> C:\Development\GithubRep\VS2013\Temere\Temere\Release\Utility.dll

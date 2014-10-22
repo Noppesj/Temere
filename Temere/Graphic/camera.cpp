@@ -8,7 +8,12 @@ Camera::Camera()
 	mPosition = glm::vec3(0.0f, 0.0f, 0.0f);
 	mForward = glm::vec3(0.0f, 0.0f, 1.0f);
 	mUp = glm::vec3(0.0f, 1.0f, 0.0f);
-	mProjectionMatrix = glm::perspective(90.0f, 1.77777778f, 0.01f, 1000.0f);
+	mFov = 90.0f;
+	mAspect = 1.77777778f;
+	mNear = 0.01f;
+	mFar = 100.0f;
+
+	mProjectionMatrix = glm::perspective(mFov, mAspect, mNear, mFar);
 }
 
 Camera::Camera(const glm::vec3 &pos, float fov, float aspect, float zNear, float zFar)
@@ -16,7 +21,12 @@ Camera::Camera(const glm::vec3 &pos, float fov, float aspect, float zNear, float
 	mPosition = pos;
 	mForward = glm::vec3(0.0f, 0.0f, 1.0f);
 	mUp = glm::vec3(0.0f, 1.0f, 0.0f);
-	mProjectionMatrix = glm::perspective(fov, aspect, zNear, zFar);
+	mFov = fov;
+	mAspect = aspect;
+	mNear = zNear;
+	mFar = zFar;
+	
+	mProjectionMatrix = glm::perspective(mFov, mAspect, mNear, mFar);
 }
 
 Camera::Camera(const Camera& ref)

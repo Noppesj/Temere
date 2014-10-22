@@ -1,28 +1,17 @@
-﻿Build started 2014-07-01 15:33:46.
-     1>Project "C:\Development\Temere\Temere\Graphic\Graphic.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../../References/Include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt spriteanimation.cpp
-         spriteanimation.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Development\Temere\Temere\Release\Graphic.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\\..\\References\Lib glew32.lib SDL2.lib SDL2main.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Development\Temere\Temere\Release\Graphic.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Development\Temere\Temere\Release\Graphic.lib" /MACHINE:X86 /SAFESEH /DLL Release\bufferresource.obj
-         Release\camera.obj
-         Release\graphicmanager.obj
-         Release\graphicobject.obj
-         Release\shader.obj
-         Release\spriteanimation.obj
-         Release\spriteobject.obj
-         Release\stb_image.obj
-         Release\texture.obj
-         Release\vertex.obj
-         Release\display.obj
-         C:\Development\Temere\Temere\Release\Scene.lib
-         C:\Development\Temere\Temere\Release\Utility.lib
-            Creating library C:\Development\Temere\Temere\Release\Graphic.lib and object C:\Development\Temere\Temere\Release\Graphic.exp
-         Generating code
-         Finished generating code
-         Graphic.vcxproj -> C:\Development\Temere\Temere\Release\Graphic.dll
-     1>Done Building Project "C:\Development\Temere\Temere\Graphic\Graphic.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:03.45
+﻿  bufferresource.cpp
+  camera.cpp
+  GLM: perspective function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  graphicmanager.cpp
+  graphicobject.cpp
+  modelobject.cpp
+  shader.cpp
+  spriteanimation.cpp
+  spriteobject.cpp
+  texture.cpp
+  vertex.cpp
+  display.cpp
+  stb_image.c
+     Creating library C:\Development\GithubRep\VS2013\Temere\Temere\Release\Graphic.lib and object C:\Development\GithubRep\VS2013\Temere\Temere\Release\Graphic.exp
+  Generating code
+  Finished generating code
+  Graphic.vcxproj -> C:\Development\GithubRep\VS2013\Temere\Temere\Release\Graphic.dll

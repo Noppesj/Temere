@@ -12,11 +12,19 @@ SpriteObject::SpriteObject() : GraphicObject()
 		mVertex.push_back(new Vertex(glm::vec3(1.0, 0, 0), glm::vec2(0, 1), glm::vec3(0, 0, 0)));
 		mVertex.push_back(new Vertex(glm::vec3(0, 1.0, 0), glm::vec2(1, 0), glm::vec3(0, 0, 0)));
 		mVertex.push_back(new Vertex(glm::vec3(1.0, 1.0, 0), glm::vec2(0, 0), glm::vec3(0, 0, 0)));*/
+		Vertex a = Vertex(glm::vec3(1, 1, 0), glm::vec2(0, 0), glm::vec3(0, 0, 0));
+		Vertex b = Vertex(glm::vec3(-1, 1, 0), glm::vec2(1, 0), glm::vec3(0, 0, 0));
+		Vertex c = Vertex(glm::vec3(1, -1, 0), glm::vec2(0, 1), glm::vec3(0, 0, 0));
+		Vertex d = Vertex(glm::vec3(-1, -1, 0), glm::vec2(1, 1), glm::vec3(0, 0, 0));
+		mVertex.push_back(&a);
+		mVertex.push_back(&b);
+		mVertex.push_back(&c);
+		mVertex.push_back(&d);
 
-		mVertex.push_back(TEMERE_NEW Vertex(glm::vec3(1, 1, 0), glm::vec2(0, 0), glm::vec3(0, 0, 0)));
+		/*mVertex.push_back(TEMERE_NEW Vertex(glm::vec3(1, 1, 0), glm::vec2(0, 0), glm::vec3(0, 0, 0)));
 		mVertex.push_back(TEMERE_NEW Vertex(glm::vec3(-1, 1, 0), glm::vec2(1, 0), glm::vec3(0, 0, 0)));
 		mVertex.push_back(TEMERE_NEW Vertex(glm::vec3(1, -1, 0), glm::vec2(0, 1), glm::vec3(0, 0, 0)));
-		mVertex.push_back(TEMERE_NEW Vertex(glm::vec3(-1, -1, 0), glm::vec2(1, 1), glm::vec3(0, 0, 0)));
+		mVertex.push_back(TEMERE_NEW Vertex(glm::vec3(-1, -1, 0), glm::vec2(1, 1), glm::vec3(0, 0, 0)));*/
 
 		std::vector<GLuint> mIndices;
 		mIndices.push_back(0);
@@ -28,11 +36,11 @@ SpriteObject::SpriteObject() : GraphicObject()
 
 		mBufferResource = GraphicManager::getInstance()->loadBufferResource(mVertex, mIndices, "SpriteObject");
 
-		for(unsigned int i = 0; i < mVertex.size(); i++)
+		/*for(unsigned int i = 0; i < mVertex.size(); i++)
 		{
 			TEMERE_SAFE_DELETE(mVertex[i])
-		}
-		mVertex.clear();
+		}*/
+		//mVertex.clear();
 	}
 }
 

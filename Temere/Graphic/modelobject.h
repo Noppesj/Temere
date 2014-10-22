@@ -17,8 +17,11 @@ namespace Temere
 				TEMERE_DYNAMIC_LIBRARY_PREFIX const ModelObject& operator=(const ModelObject& ref);
 				
 				TEMERE_DYNAMIC_LIBRARY_PREFIX bool loadObj(const std::string& path);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX void Draw(const glm::mat4 &projMatrix, const glm::mat4 &viewMatrix);
 			private:
-				int test;
+				
+				TEMERE_DYNAMIC_LIBRARY_PREFIX glm::vec3 splitVec3(char* line);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX glm::vec2 splitVec2(char* line);
 		};
 	}
 }

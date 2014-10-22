@@ -1,6 +1,7 @@
 #include "..\\Graphic\display.h"
 #include "..\Graphic\camera.h"
 #include "..\\Logic\player.h"
+#include "..\\Graphic\modelobject.h"
 #include "..\\Utility\timer.h"
 #include "easylogging++.h"
 
@@ -31,10 +32,19 @@ int main(int argc, char *argv[])
 
 	Camera camera(glm::vec3(0.0f, 0.0f, -3.0f), 70.0f, (float)DISPLAY_WIDTH/(float)DISPLAY_HEIGHT, 0.1f, 100.0f);
 	
-	//Player player(AnimationLogic(0, 5), AnimationLogic(6, 11), AnimationLogic(12, 17), AnimationLogic(18, 23), AnimationLogic(24, 29), AnimationLogic(30, 35), 6, 6);
-	//Player player(AnimationLogic(0, 3), AnimationLogic(4, 7), AnimationLogic(8, 11), AnimationLogic(12, 15), 4, 8);
-	/*Player(AnimationLogic headLeft, AnimationLogic headRight, AnimationLogic headUp, AnimationLogic headDown, AnimationLogic bodyLeft, AnimationLogic bodyRight,
-														AnimationLogic bodyUp, AnimationLogic bodyDown, unsigned int mTextureRows, unsigned int mTextureCols);*/
+
+	SpriteObject test;
+	test.loadShaders("textureVertex.glsl", "textureFragment.glsl");
+	test.loadTexture("Pninja2.png");
+	test.setScale(glm::vec3(1.0f, 1.0f, 1.0f));
+	test.setPosition(glm::vec3(0.0f, 0.5f, 0.0f));
+
+	SpriteAnimation test2(8, 8);
+	test2.loadShaders("animationVertex.glsl", "textureFragment.glsl");
+	test2.loadTexture("Pninja2.png");
+	test2.setScale(glm::vec3(1.0f, 1.0f, 1.0f));
+	test2.setPosition(glm::vec3(0.0f, 0.5f, 0.0f));
+
 	AnimationLogic a1 = AnimationLogic(0, 3);
 	AnimationLogic a2 = AnimationLogic(8, 11);
 	AnimationLogic a3 = AnimationLogic(16, 19);
@@ -43,16 +53,32 @@ int main(int argc, char *argv[])
 	AnimationLogic a6 = AnimationLogic(48, 52);
 	AnimationLogic a7 = AnimationLogic(32, 35);
 	AnimationLogic a8 = AnimationLogic(40, 43);
-	//Player player(AnimationLogic(0, 3), AnimationLogic(8, 11), AnimationLogic(16, 19), AnimationLogic(24, 27), AnimationLogic(56, 60), AnimationLogic(48, 52), AnimationLogic(32, 35), AnimationLogic(40, 43),  8, 8);
+	
 	Player player(a1, a2, a3, a4, a5, a6, a7, a8, 8, 8);
 	player.loadShaders("animationVertex.glsl", "textureFragment.glsl");
 	player.loadTexture("Pninja2.png");
 	player.setScale(glm::vec3(1.0f, 1.0f, 1.0f));
 	player.setPosition(glm::vec3(0.0f, 0.5f, 0.0f));
 	
-	SpriteObject test;
-	test.loadShaders("textureVertex.glsl", "textureFragment.glsl");
-	test.loadTexture("Pninja2.png");
+	ModelObject modelObject;
+	if (!modelObject.loadShaders("textureVertex2.glsl", "textureFragment2.glsl"))
+	{
+		std::cout << "Fail to load shaders \n";
+		return 0;
+	}
+	if (!modelObject.loadTexture("Dragon.dds"))
+	{
+		std::cout << "Fail to load texture \n";
+		return 0;
+	}
+	if (!modelObject.loadObj("..\\..\\Resources\\Models\\Dragon.obj"))
+	{
+		std::cout << "Fail to load obj \n";
+		return 0;
+	}
+	modelObject.setScale(glm::vec3(1.0f, 1.0f, 1.0f));
+	modelObject.setPosition(glm::vec3(0.0f, 0.5f, 1.0f));
+	
 	SDL_Event e;
 	//int spriteIndex = 0;
 	bool isRunning = true;
@@ -95,9 +121,10 @@ int main(int argc, char *argv[])
 			
 			camera.updatePos(player.getPosition());
 			display.Clear(0.0f, 0.0f, 0.0f, 1.0f);
-			player.draw(camera.GetProj(), camera.GetView());
 			test.Draw(camera.GetProj(), camera.GetView());
-			//player.draw(camera.GetViewProjection(), glm::mat4());
+			test2.Draw(camera.GetProj(), camera.GetView(), 1);
+			player.draw(camera.GetProj(), camera.GetView());
+			//modelObject.Draw(camera.GetProj(), camera.GetView());
 			display.SwapBuffers();
 			frame++;
 			if( (SDL_GetTicks() - startTicks) < 1000 / 150 )

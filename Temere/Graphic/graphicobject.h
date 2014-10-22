@@ -15,13 +15,13 @@ namespace Temere
 		class GraphicObject : public SceneObject 
 		{
 			public:
-				TEMERE_DYNAMIC_LIBRARY_PREFIX GraphicObject(std::vector<Vertex*> vertices, std::vector<GLuint> indices, std::string fileName);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX GraphicObject(const std::vector<Vertex*> &vertices,const std::vector<GLuint>& indices,const std::string& fileName);
 				TEMERE_DYNAMIC_LIBRARY_PREFIX GraphicObject(const GraphicObject& ref);
 				TEMERE_DYNAMIC_LIBRARY_PREFIX virtual ~GraphicObject();
 				TEMERE_DYNAMIC_LIBRARY_PREFIX const GraphicObject& operator=(const GraphicObject& ref);
 
-				TEMERE_DYNAMIC_LIBRARY_PREFIX bool loadShaders(std::string vertexShader_path, std::string fragmentShader_path);
-				TEMERE_DYNAMIC_LIBRARY_PREFIX bool loadTexture(std::string texturePath);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX bool loadShaders(const std::string& vertexShader_path,const std::string& fragmentShader_path);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX bool loadTexture(const std::string& texturePath);
 
 				TEMERE_DYNAMIC_LIBRARY_PREFIX void Draw(const glm::mat4 &projMatrix, const glm::mat4 &viewMatrix);
 

@@ -23,11 +23,11 @@ namespace Temere
 				TEMERE_DYNAMIC_LIBRARY_PREFIX static GraphicManager* getInstance();
 				TEMERE_DYNAMIC_LIBRARY_PREFIX virtual ~GraphicManager();
 
-				TEMERE_DYNAMIC_LIBRARY_PREFIX Shader* loadShader(std::string &vertexShader, std::string &fragmentShader);
-				TEMERE_DYNAMIC_LIBRARY_PREFIX Texture* loadTexture(std::string &textureFile);
-				TEMERE_DYNAMIC_LIBRARY_PREFIX BufferResource* loadBufferResource(std::vector<Vertex*> &vertices, std::vector<GLuint> &indices, std::string fileName);
-
-				TEMERE_DYNAMIC_LIBRARY_PREFIX BufferResource* getBufferResource(std::string fileName);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX Shader* loadShader(const std::string &vertexShader, const std::string &fragmentShader);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX Texture* loadTexture(const std::string &textureFile);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX BufferResource* loadBufferResource(const std::vector<Vertex*> &vertices, const std::vector<GLuint> &indices, const std::string& fileName);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX BufferResource* loadBufferResource(const std::vector<Vertex*> &vertices, const std::string& fileName);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX BufferResource* getBufferResource(const std::string& fileName);
 
 				TEMERE_DYNAMIC_LIBRARY_PREFIX void ClearResources();
 				TEMERE_DYNAMIC_LIBRARY_PREFIX void UseShader(Shader* shader);

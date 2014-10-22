@@ -20,7 +20,8 @@ namespace Temere
 				TEMERE_DYNAMIC_LIBRARY_PREFIX void bindTexture();
 				TEMERE_DYNAMIC_LIBRARY_PREFIX void unbindTexture();
 
-				TEMERE_DYNAMIC_LIBRARY_PREFIX bool loadTexture(const std::string textureFile);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX bool loadTexture(const std::string& textureFile);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX bool loadDDS(const char* imagepath);
 				TEMERE_DYNAMIC_LIBRARY_PREFIX GLuint getTextureID();
 			private:
 				GLuint mTextureID;

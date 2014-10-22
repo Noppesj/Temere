@@ -19,7 +19,7 @@ GraphicManager* GraphicManager::getInstance()
 	return mpInstance;
 }
 
-Shader* GraphicManager::loadShader(std::string &vertexShader, std::string &fragmentShader)
+Shader* GraphicManager::loadShader(const std::string &vertexShader, const std::string &fragmentShader)
 {
 	std::string key = vertexShader;
 	key += fragmentShader;
@@ -37,7 +37,7 @@ Shader* GraphicManager::loadShader(std::string &vertexShader, std::string &fragm
 	}
 }
 
-Texture* GraphicManager::loadTexture(std::string &textureFile)
+Texture* GraphicManager::loadTexture(const std::string &textureFile)
 {
 	std::string key = textureFile;
 
@@ -54,7 +54,7 @@ Texture* GraphicManager::loadTexture(std::string &textureFile)
 	}
 }
 
-BufferResource* GraphicManager::loadBufferResource(std::vector<Vertex*> &vertices, std::vector<GLuint> &indices, std::string fileName)
+BufferResource* GraphicManager::loadBufferResource(const std::vector<Vertex*> &vertices, const std::vector<GLuint> &indices, const std::string& fileName)
 {
 	std::string key = fileName;
 
@@ -70,7 +70,23 @@ BufferResource* GraphicManager::loadBufferResource(std::vector<Vertex*> &vertice
 	}	
 }
 
-BufferResource* GraphicManager::getBufferResource(std::string fileName)
+BufferResource* GraphicManager::loadBufferResource(const std::vector<Vertex*> &vertices, const std::string& fileName)
+{
+	std::string key = fileName;
+
+	if (mBufferResourceMap.count(key) == 0)
+	{
+		BufferResource *bufferResource = TEMERE_NEW BufferResource(vertices, fileName);
+		mBufferResourceMap.emplace(key, bufferResource);
+		return bufferResource;
+	}
+	else
+	{
+		return mBufferResourceMap[key];
+	}
+}
+
+BufferResource* GraphicManager::getBufferResource(const std::string& fileName)
 {
 	if(mBufferResourceMap.count(fileName) == 0) 
 	{

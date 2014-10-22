@@ -102,7 +102,7 @@ void Player::draw(const glm::mat4& projection, const  glm::mat4& view)
 	if(mLegs != nullptr)
 		mLegs->Draw(projection, view, mCurrentLegsIndex);
 }
-void Player::loadShaders(std::string vertexShader_path, std::string fragmentShader_path)
+void Player::loadShaders(const std::string& vertexShader_path, const std::string& fragmentShader_path)
 {
 	mHead->loadShaders(vertexShader_path, fragmentShader_path);
 	mBody->loadShaders(vertexShader_path, fragmentShader_path);
@@ -111,7 +111,7 @@ void Player::loadShaders(std::string vertexShader_path, std::string fragmentShad
 		mLegs->loadShaders(vertexShader_path, fragmentShader_path);
 }
 
-bool Player::loadTexture(std::string texturePath)
+bool Player::loadTexture(const std::string& texturePath)
 {
 	bool result = true;
 	result = mHead->loadTexture(texturePath);

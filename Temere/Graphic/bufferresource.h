@@ -24,7 +24,8 @@ namespace Temere
 		{
 			public:
 				TEMERE_DYNAMIC_LIBRARY_PREFIX BufferResource();
-				TEMERE_DYNAMIC_LIBRARY_PREFIX BufferResource(std::vector<Vertex*> &vertices, std::vector<GLuint> &indices, std::string &fileName);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX BufferResource(const std::vector<Vertex*> &vertices, const std::vector<GLuint> &indices, const std::string &fileName);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX BufferResource(const std::vector<Vertex*> &vertices, const std::string &fileName);
 				TEMERE_DYNAMIC_LIBRARY_PREFIX virtual ~BufferResource();
 				TEMERE_DYNAMIC_LIBRARY_PREFIX BufferResource(const BufferResource& ref);
 				TEMERE_DYNAMIC_LIBRARY_PREFIX const BufferResource& operator=(const BufferResource& ref);
@@ -39,7 +40,8 @@ namespace Temere
 				GLuint mNumIndices;
 				std::string mFileName;
 
-				TEMERE_DYNAMIC_LIBRARY_PREFIX void init(std::vector<Vertex*> &vertices, std::vector<GLuint> &indices);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX void init(const std::vector<Vertex*> &vertices, const std::vector<GLuint> &indices);
+				TEMERE_DYNAMIC_LIBRARY_PREFIX void init(const std::vector<Vertex*> &vertices);
 		};
 	}
 }

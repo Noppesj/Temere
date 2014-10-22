@@ -54,6 +54,8 @@ Display::Display(int width, int height, const std::string &title)
 	glEnable (GL_BLEND);
 	//glBlendFunc (GL_ONE);
 	glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	//glEnable(GL_MULTISAMPLE);
+	//glEnable(GL_DEPTH_TEST);
 }
 
 Display::Display(const Display& ref)

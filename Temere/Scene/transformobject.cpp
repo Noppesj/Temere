@@ -5,7 +5,7 @@ using namespace Temere::Scene;
 using namespace Temere::Utility;
 
 TransformObject::TransformObject() : Object(),
-	mPosition(0.0f, 0.0f, 0.0f), mRotate(0.0f, 0.0f, 0.0f), mScale(1.0f, 1.0f, 1.0f),
+	mPosition(0.0f, 0.0f, 0.0f), mRotate(0.0f, 0.0f, 0.0f), mScale(0.0f, 0.0f, 0.0f),
 	mTranslateMatrix(), mRotateMatrix(), mScaleMatrix(), mTransformMatrix()
 {
 	mTransformMatrix = glm::mat4();

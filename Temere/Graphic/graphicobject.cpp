@@ -2,13 +2,13 @@
 
 using namespace Temere::Graphic;
 
-GraphicObject::GraphicObject()
+GraphicObject::GraphicObject() : SceneObject()
 {
 	mpShader = nullptr;
 	mpTexture = nullptr;
 }
 
-GraphicObject::GraphicObject(std::vector<Vertex*> vertices, std::vector<GLuint> indices, std::string fileName) : SceneObject()
+GraphicObject::GraphicObject(const std::vector<Vertex*> &vertices,const std::vector<GLuint>& indices, const std::string& fileName) : SceneObject()
 {
 	mpShader = nullptr;
 	mpTexture = nullptr;
@@ -37,14 +37,14 @@ const GraphicObject& GraphicObject::operator=(const GraphicObject& ref)
 	return *this;
 }
 
-bool GraphicObject::loadShaders(std::string vertexShader_path, std::string fragmentShader_path)
+bool GraphicObject::loadShaders(const std::string& vertexShader_path, const std::string& fragmentShader_path)
 {
 	mpShader = GraphicManager::getInstance()->loadShader(vertexShader_path, fragmentShader_path);
 	
 	return (mpShader != nullptr) ? true : false;  
 }
 
-bool GraphicObject::loadTexture(std::string texturePath)
+bool GraphicObject::loadTexture(const std::string& texturePath)
 {
 	mpTexture = GraphicManager::getInstance()->loadTexture(texturePath);
 	
